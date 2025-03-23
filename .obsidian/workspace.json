@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2025-23-03-Linguagem-C.md",
+                "file": "_posts/2025-01-24-main.start.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-23-03-Linguagem-C"
+              "title": "2025-01-24-main.start"
             }
           }
         ],
@@ -109,7 +109,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2025-23-03-Linguagem-C.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2025-23-03-Linguagem-C"
+              "title": "Backlinks"
             }
           },
           {
@@ -128,12 +127,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2025-23-03-Linguagem-C.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2025-23-03-Linguagem-C"
+              "title": "Outgoing links"
             }
           },
           {
@@ -183,8 +181,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7725923efda8f863",
+  "active": "52f16c582e03e42e",
   "lastOpenFiles": [
+    "_posts/2025-03-23-Linguagem-C.md",
     "_posts/2025-01-24-main.start.md",
     "_posts/2025-23-03-Linguagem-C.md",
     "_pages/about.md",
