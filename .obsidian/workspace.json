@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_pages/about.md",
+                "file": "_posts/2025-01-24-main.start.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about"
+              "title": "2025-01-24-main.start"
             }
           }
         ],
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/about.md",
+                "file": "_posts/2025-01-24-main.start.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for about"
+              "title": "Backlinks for 2025-01-24-main.start"
             }
           },
           {
@@ -128,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/about.md",
+                "file": "_posts/2025-01-24-main.start.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from about"
+              "title": "Outgoing links from 2025-01-24-main.start"
             }
           },
           {
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/about.md",
+                "file": "_posts/2025-01-24-main.start.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of about"
+              "title": "Outline of 2025-01-24-main.start"
             }
           }
         ]
@@ -185,10 +185,13 @@
   },
   "active": "7725923efda8f863",
   "lastOpenFiles": [
+    "_pages/about.html",
+    "_pages/about.md",
+    "_pages/----about.md",
+    "_pages/blog-post-html.html",
     "_posts/2025-01-24-main.start.md",
     "_posts/2025-23-03-Linguagem-C.md",
     "_posts/2025-03-23-Linguagem-C.md",
-    "_pages/about.md",
     "Untitled.md"
   ]
 }
