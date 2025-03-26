@@ -1,6 +1,6 @@
 # Site settings
 title:          Thiago
-description:    "Um blog minimo de programação em Kotlin"
+description:    "Um blog minimo de programação"
 baseurl:        "/"
 url:            "https://othiagob.github.io"
 
