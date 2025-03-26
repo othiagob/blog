@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"id":"32bd41e01c202761","type":"text","text":"teste\n","x":-480,"y":-290,"width":250,"height":60},
+		{"id":"add21289e75b11e8","type":"text","text":"de \ncanvas\n","x":-252,"y":-197,"width":250,"height":60},
+		{"id":"904649db2d6eb137","type":"file","file":"_posts/2025-03-23-Linguagem-C.md","x":80,"y":-110,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"b5de2795edfb59fa","fromNode":"904649db2d6eb137","fromSide":"top","toNode":"add21289e75b11e8","toSide":"right"}
+	]
+}
