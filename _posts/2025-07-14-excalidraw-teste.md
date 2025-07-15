@@ -12,4 +12,4 @@ date: 2025-07-14 11:00:00 -0300
 
 
 
-![Fluxograma feito no excalidraw.](https://i.imgur.com/lPAQAXN.png)
+![Fluxograma feito no excalidraw.](https://i.imgur.com/wayKbR6.png)
