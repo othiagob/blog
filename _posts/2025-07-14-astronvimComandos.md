@@ -1,6 +1,9 @@
-	---
-Com certeza! Aqui está o resumo de tudo o que conversamos sobre navegação no AstroNvim, formatado em um arquivo Markdown pronto para você salvar e consultar.
-
+---
+layout: post
+title: "Navegação Essencial no AstroNvim (Neovim)"
+date: 2025-07-14 12:00:00 -0300
+categories: [tutorial, neovim]
+tags: [astronvim, neovim, navegação, editor]
 ---
 
 # Navegação Essencial no AstroNvim (Neovim)
