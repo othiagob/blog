@@ -5,6 +5,8 @@ date: 2025-07-14 11:00:00 -0300
 categories: [programação, c]
 tags: [c, vetores, arrays, programação, iniciantes]
 ---
+-----
+---
 
 # Vetores em C: 5 Exemplos Essenciais para Iniciantes
 

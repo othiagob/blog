@@ -8,8 +8,7 @@ categories:
 tags:
   - astronvim
   - neovim
-  - navegação
-  - editor
+  - commands
 ---
 
 # Navegação Essencial no AstroNvim (Neovim)
