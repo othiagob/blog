@@ -1,9 +1,13 @@
 ---
 layout: post
-title: "Post de Teste"
-date: 2025-07-15 02:05:00 -0300
-categories: [teste, exemplo]
-tags: [jekyll, markdown]
+title: Post de Teste
+date: 2025-07-13 02:05:00 -0300
+categories:
+  - teste
+  - exemplo
+tags:
+  - jekyll
+  - markdown
 ---
 
 # Post de Teste
