@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Novo Post Exemplo"
-date: 2025-07-15 01:47:00 -0300
+date: 2025-07-14 23:47:00 -0300
 categories: blog
 tags: [jekyll, github-pages, exemplo]
 ---
