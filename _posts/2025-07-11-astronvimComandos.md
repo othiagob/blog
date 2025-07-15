@@ -1,9 +1,15 @@
 ---
 layout: post
-title: "Navegação Essencial no AstroNvim (Neovim)"
-date: 2025-07-14 12:00:00 -0300
-categories: [tutorial, neovim]
-tags: [astronvim, neovim, navegação, editor]
+title: Navegação Essencial no AstroNvim (Neovim)
+date: 2025-07-11 12:00:00 -0300
+categories:
+  - tutorial
+  - neovim
+tags:
+  - astronvim
+  - neovim
+  - navegação
+  - editor
 ---
 
 # Navegação Essencial no AstroNvim (Neovim)

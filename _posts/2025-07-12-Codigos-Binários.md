@@ -6,7 +6,7 @@ categories:
   - blog
   - teste
   - c
-date: 2025-07-12
+date: 2025-07-14
 tags:
   - c
   - arrays
