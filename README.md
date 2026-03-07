@@ -3,72 +3,72 @@
 [![github pages](https://github.com/clente/hugo-bearcub/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/clente/hugo-bearcub/actions/workflows/gh-pages.yml)
 [![MIT license](https://img.shields.io/github/license/clente/hugo-bearcub)](https://github.com/clente/hugo-bearcub/blob/main/LICENSE)
 
-## Overview
+## Visão Geral
 
-🐻 A lightweight [Hugo](https://gohugo.io/) theme based on [Bear
-Blog](https://bearblog.dev) and [Hugo Bear
+🐻 Um tema leve para o [Hugo](https://gohugo.io/) baseado no [Bear
+Blog](https://bearblog.dev) e no [Hugo Bear
 Blog](https://github.com/janraasch/hugo-bearblog).
 
-**Bear Cub** takes care of speed and optimization, so you can focus on writing
-good content. It is free, multilingual, optimized for search engines,
-no-nonsense, responsive, light, and fast. Really fast.
+O **Bear Cub** cuida da velocidade e da otimização para que você possa se concentrar
+em escrever bom conteúdo. É gratuito, multilíngue, otimizado para mecanismos de busca,
+sem frescuras, responsivo, leve e rápido. Muito rápido.
 
-## Installation
+## Instalação
 
-Follow Hugo's [quick start](https://gohugo.io/getting-started/quick-start/) to
-create an empty website and then clone **Bear Cub** into the themes directory as
-a [Git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules):
+Siga o [guia de início rápido](https://gohugo.io/getting-started/quick-start/) do Hugo para
+criar um site vazio e, em seguida, clone o **Bear Cub** no diretório de temas como
+um [submódulo Git](https://git-scm.com/book/en/v2/Git-Tools-Submodules):
 
 ```sh
 git submodule add https://github.com/clente/hugo-bearcub themes/hugo-bearcub
 ```
 
-To finish off, append a line to the site configuration file:
+Para finalizar, adicione uma linha ao arquivo de configuração do site:
 
 ```sh
 echo 'theme = "hugo-bearcub"' >> hugo.toml
 ```
 
-## Features
+## Funcionalidades
 
-Like [Bear Blog](https://bearblog.dev), this theme:
-- Is free and open source
-- Looks great on any device
-- Makes tiny (~5kb), optimized, and awesome pages
-- Has no trackers, ads, or scripts
-- Automatically generates an RSS feed
+Assim como o [Bear Blog](https://bearblog.dev), este tema:
+- É gratuito e de código aberto
+- Tem boa aparência em qualquer dispositivo
+- Gera páginas minúsculas (~5kb), otimizadas e incríveis
+- Não possui rastreadores, anúncios ou scripts
+- Gera automaticamente um feed RSS
 
-But that's not all! **Bear Cub** is also...
+Mas não é só isso! O **Bear Cub** também é...
 
-### Accessible
+### Acessível
 
-**Bear Cub** has a few accessibility upgrades when compared to its predecessors.
-The color palette has been overhauled to make sure everything is
-[readable](https://web.dev/color-and-contrast-accessibility/) for users with low
-vision impairments or color deficiencies, and some interactive elements were
-made bigger to facilitate [clicking](https://web.dev/accessible-tap-targets/)
-for users with a motor impairment.
+O **Bear Cub** possui algumas melhorias de acessibilidade em comparação com seus predecessores.
+A paleta de cores foi reformulada para garantir que tudo seja
+[legível](https://web.dev/color-and-contrast-accessibility/) para usuários com baixa
+visão ou deficiências de cor, e alguns elementos interativos foram
+aumentados para facilitar o [clique](https://web.dev/accessible-tap-targets/)
+para usuários com dificuldades motoras.
 
-These small changes mean that **Bear Cub** passes Google's [PageSpeed
-test](https://pagespeed.web.dev/report?url=https%3A%2F%2Fclente.github.io%2Fhugo-bearcub%2F)
-with flying colors.
+Essas pequenas mudanças fazem com que o **Bear Cub** passe no [teste PageSpeed
+](https://pagespeed.web.dev/report?url=https%3A%2F%2Fclente.github.io%2Fhugo-bearcub%2F)
+do Google com louvor.
 
-![PageSpeed score](https://raw.githubusercontent.com/clente/hugo-bearcub/main/images/pagespeed.webp)
+![Pontuação PageSpeed](https://raw.githubusercontent.com/clente/hugo-bearcub/main/images/pagespeed.webp)
 
-### Secure
+### Seguro
 
-[**Bear Cub**'s demo](https://clente.github.io/hugo-bearcub/) is hosted on GitHub
-and therefore I'm not in control of its [Content Security
-Policy](https://infosec.mozilla.org/guidelines/web_security#content-security-policy).
-However, the theme itself was made with security in mind: there are no inline
-styles and it uses no JavaScript at all.
+[A demonstração do **Bear Cub**](https://clente.github.io/hugo-bearcub/) está hospedada no GitHub
+e, portanto, não tenho controle sobre sua [Política de Segurança de Conteúdo
+](https://infosec.mozilla.org/guidelines/web_security#content-security-policy).
+No entanto, o tema em si foi desenvolvido com segurança em mente: não há estilos
+inline e não utiliza JavaScript algum.
 
-If you want to improve your [Mozilla
-Observatory](https://observatory.mozilla.org/) score even further, you should be
-able to simply add a few headers to your hosting service's configuration (e.g.
-[Netlify](https://docs.netlify.com/routing/headers/) or [Cloudflare
-Pages](https://developers.cloudflare.com/pages/platform/headers/)) and never
-have to think about it again. My `_headers` file, for example, looks like this:
+Se você quiser melhorar ainda mais sua pontuação no [Mozilla
+Observatory](https://observatory.mozilla.org/), basta adicionar alguns cabeçalhos
+à configuração do seu serviço de hospedagem (por exemplo,
+[Netlify](https://docs.netlify.com/routing/headers/) ou [Cloudflare
+Pages](https://developers.cloudflare.com/pages/platform/headers/)) e nunca mais
+precisar pensar nisso. Meu arquivo `_headers`, por exemplo, se parece com este:
 
 ```
 /*
@@ -82,94 +82,90 @@ have to think about it again. My `_headers` file, for example, looks like this:
   X-XSS-Protection: 1; mode=block
 ```
 
-### Multilingual
+### Multilíngue
 
-If you need to write a blog that supports more than one language, **Bear Cub**
-has you covered! Check out the demo's [`hugo.toml`
-file](https://github.com/clente/hugo-bearcub/blob/main/exampleSite/hugo.toml)
-for a sample of how you can setup multilingual support.
+Se você precisa escrever um blog com suporte a mais de um idioma, o **Bear Cub**
+tem tudo o que você precisa! Confira o arquivo [`hugo.toml`
+](https://github.com/clente/hugo-bearcub/blob/main/exampleSite/hugo.toml) da demonstração
+para um exemplo de como configurar o suporte multilíngue.
 
-By default, the theme creates a translation button that gets disabled when the
-current page is only available in any other language. You can also choose to
-hide this button (instead of disabling it) by setting `hideUntranslated =
+Por padrão, o tema cria um botão de tradução que fica desativado quando a
+página atual está disponível apenas em outro idioma. Você também pode optar por
+ocultar esse botão (em vez de desativá-lo) definindo `hideUntranslated =
 true`.
 
-### More
+### Mais
 
-Every once in a while, as I keep using **Bear Cub**, I notice that there is some
-functionality missing. Currently, these are the "advanced features" that I have
-already implemented:
+De vez em quando, enquanto uso o **Bear Cub**, percebo que alguma funcionalidade
+está faltando. Atualmente, estas são as "funcionalidades avançadas" que já implementei:
 
-- Full-text RSS feed: an enhanced RSS feed template that includes the (properly
-  encoded) full content of your posts in the feed itself.
-- Static content: you can create empty blog entries that act as links to static
-  files by including `link: "{url}"` in a post's [front
-  matter](https://gohugo.io/content-management/front-matter/). You can also add
-  `render: false` to your [build
-  options](https://gohugo.io/content-management/build-options/#readout) to avoid
-  rendering blank posts.
-- Skip link: a "skip to main content" link that is temporarily invisible, but
-  can be focused by people who need a keyboard to navigate the web (see [PR
-  #5](https://github.com/clente/hugo-bearcub/pull/5) by
-  [@2kool4idkwhat](https://github.com/2kool4idkwhat) for more information).
-- Reply by email: if you supply an email address, the theme creates a "Reply to
-  this post by email" button at the end of every post (see Kev Quirk's [original
-  implementation](https://kevquirk.com/adding-the-post-title-to-my-reply-by-email-button)).
-  This button can be suppressed on a case-by-case by setting `hideReply: true`
-  in a post's [front matter](https://gohugo.io/content-management/front-matter/)
-  (see [PR #18](https://github.com/clente/hugo-bearcub/pull/18) by
+- Feed RSS com texto completo: um template de feed RSS aprimorado que inclui o conteúdo
+  completo (devidamente codificado) dos seus posts no próprio feed.
+- Conteúdo estático: você pode criar entradas de blog vazias que funcionam como links para
+  arquivos estáticos incluindo `link: "{url}"` no [front
+  matter](https://gohugo.io/content-management/front-matter/) de um post. Você também pode
+  adicionar `render: false` às suas [opções de build
+  ](https://gohugo.io/content-management/build-options/#readout) para evitar renderizar posts em branco.
+- Link de pular conteúdo: um link "pular para o conteúdo principal" temporariamente invisível, mas
+  que pode ser focado por pessoas que precisam de teclado para navegar na web (veja o [PR
+  #5](https://github.com/clente/hugo-bearcub/pull/5) de
+  [@2kool4idkwhat](https://github.com/2kool4idkwhat) para mais informações).
+- Responder por e-mail: se você fornecer um endereço de e-mail, o tema cria um botão "Responder
+  a este post por e-mail" no final de cada post (veja a [implementação original
+  ](https://kevquirk.com/adding-the-post-title-to-my-reply-by-email-button) de Kev Quirk).
+  Este botão pode ser suprimido individualmente definindo `hideReply: true`
+  no [front matter](https://gohugo.io/content-management/front-matter/) de um post
+  (veja o [PR #18](https://github.com/clente/hugo-bearcub/pull/18) de
   [@chrsmutti](https://github.com/chrsmutti)).
-- `absfigure` shortcode: a shortcut to use the `figure` shortcode that also
-  converts relative URLs into absolute URLs by using the `absURL` function.
-- Single-use CSS (EXPERIMENTAL): you can add some styles to a single page by
-  writing the CSS you need in `assets/{custom_css}.css` and then including
-  `style: "{custom_css}.css"` in the [front
-  matter](https://gohugo.io/content-management/front-matter/) of said page.
-- Conditional CSS (EXPERIMENTAL): since **Bear Cub** does syntax highlighting
-  without inline styles (see `hugo.toml` for more information), it only load its
-  `syntax.css` if, and only if, a code block is actually present in the current
-  page.
-- Alternative "Herman" style (EXPERIMENTAL): if you want to check out a more
-  modern CSS style, you can change the `themeStyle` parameter to `"herman"` in
-  order to activate [Herman Martinus's](https://herman.bearblog.dev/) version of
-  the [Blogster Minimal](https://blogster-minimal.netlify.app/) theme for
+- Shortcode `absfigure`: um atalho para usar o shortcode `figure` que também
+  converte URLs relativas em absolutas usando a função `absURL`.
+- CSS de uso único (EXPERIMENTAL): você pode adicionar estilos a uma única página
+  escrevendo o CSS necessário em `assets/{custom_css}.css` e incluindo
+  `style: "{custom_css}.css"` no [front
+  matter](https://gohugo.io/content-management/front-matter/) da página.
+- CSS condicional (EXPERIMENTAL): como o **Bear Cub** faz destaque de sintaxe
+  sem estilos inline (veja `hugo.toml` para mais informações), ele carrega seu
+  `syntax.css` somente se um bloco de código estiver presente na página atual.
+- Estilo alternativo "Herman" (EXPERIMENTAL): se quiser experimentar um estilo CSS mais
+  moderno, você pode alterar o parâmetro `themeStyle` para `"herman"` para
+  ativar a versão de [Herman Martinus](https://herman.bearblog.dev/) do tema
+  [Blogster Minimal](https://blogster-minimal.netlify.app/) para
   [Astro](https://astro.build/).
-- Dynamic social card generation (EXPERIMENTAL): if you don't add preview images
-  to a post, this template will generate one based on the title. You can see an
-  example below.
+- Geração dinâmica de cartão social (EXPERIMENTAL): se você não adicionar imagens de
+  prévia a um post, este template gerará uma baseada no título. Veja um exemplo abaixo.
 
-![Social card example](https://raw.githubusercontent.com/clente/hugo-bearcub/main/images/social_card.webp)
+![Exemplo de cartão social](https://raw.githubusercontent.com/clente/hugo-bearcub/main/images/social_card.webp)
 
-## Configuration
+## Configuração
 
-**Bear Cub** can be customized with a `hugo.toml` file. Check out the
-[configuration](https://github.com/clente/hugo-bearcub/blob/main/exampleSite/hugo.toml)
-of the [demo](https://clente.github.io/hugo-bearcub/) for more information.
+O **Bear Cub** pode ser personalizado com um arquivo `hugo.toml`. Confira a
+[configuração](https://github.com/clente/hugo-bearcub/blob/main/exampleSite/hugo.toml)
+da [demonstração](https://clente.github.io/hugo-bearcub/) para mais informações.
 
 ```toml
-# Basic config
+# Configuração básica
 baseURL = "https://example.com"
 theme = "hugo-bearcub"
 copyright = "John Doe (CC BY 4.0)"
 defaultContentLanguage = "en"
 
-# Generate a nice robots.txt for SEO
+# Gera um robots.txt para SEO
 enableRobotsTXT = true
 
-# Setup syntax highlighting without inline styles. For more information about
-# why you'd want to avoid inline styles, see
+# Configura destaque de sintaxe sem estilos inline. Para mais informações sobre
+# por que evitar estilos inline, veja
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src#unsafe_inline_styles
 [markup]
   [markup.highlight]
     lineNos = true
     lineNumbersInTable = false
-    # This allows Bear Cub to use a variation of Dracula that is more accessible
-    # to people with poor eyesight. For more information about color contrast
-    # and accessibility, see https://web.dev/color-and-contrast-accessibility/
+    # Permite que o Bear Cub use uma variação do Dracula mais acessível
+    # para pessoas com visão reduzida. Para mais informações sobre contraste de cores
+    # e acessibilidade, veja https://web.dev/color-and-contrast-accessibility/
     noClasses = false
 
-# Multilingual mode config. More for information about how to setup translation,
-# see https://gohugo.io/content-management/multilingual/
+# Configuração do modo multilíngue. Para mais informações sobre como configurar tradução,
+# veja https://gohugo.io/content-management/multilingual/
 [languages]
   [languages.en]
     title = "Bear Cub"
@@ -187,59 +183,59 @@ enableRobotsTXT = true
       madeWith = "Feito com [Bear Cub](https://github.com/clente/hugo-bearcub)"
 
 [params]
-  # The description of your website
+  # A descrição do seu site
   description = "Bear Cub Demo"
 
-  # The path to your favicon
+  # O caminho para o seu favicon
   favicon = "images/favicon.png"
 
-  # These images will show up when services want to generate a preview of a link
-  # to your site. Ignored if `generateSocialCard = true`. For more information
-  # about previews, see https://gohugo.io/templates/internal#twitter-cards and
+  # Essas imagens aparecem quando serviços geram uma prévia de um link
+  # para o seu site. Ignorado se `generateSocialCard = true`. Para mais informações
+  # sobre prévias, veja https://gohugo.io/templates/internal#twitter-cards e
   # https://gohugo.io/templates/internal#open-graph
   images = ["images/share.webp"]
 
-  # This title is used as the site_name on the Hugo's internal opengraph
-  # structured data template
+  # Este título é usado como site_name no template interno de dados estruturados
+  # opengraph do Hugo
   title = "Bear Cub"
 
-  # Dates are displayed following the format below. For more information about
-  # formatting, see https://gohugo.io/functions/format/
+  # As datas são exibidas no formato abaixo. Para mais informações sobre
+  # formatação, veja https://gohugo.io/functions/format/
   dateFormat = "2006-01-02"
 
-  # If your blog is multilingual but you haven't translated a page, this theme
-  # will create a disabled link. By setting `hideUntranslated` to true, you can
-  # have the theme simply not show any link
+  # Se o seu blog for multilíngue mas você não tiver traduzido uma página, este tema
+  # criará um link desativado. Definindo `hideUntranslated` como true, você pode
+  # fazer o tema simplesmente não mostrar nenhum link
   hideUntranslated = false
 
-  # (EXPERIMENTAL) This theme has two options for its CSS styles: "original" and
-  # "herman". The former is what you see on Bear Cub's demo (an optimized
-  # version of Hugo Bear Blog), while the latter has a more modern look based on
-  # Herman Martinus's version of the Blogster Minimal theme for Astro.
+  # (EXPERIMENTAL) Este tema tem duas opções de estilo CSS: "original" e
+  # "herman". O primeiro é o que você vê na demonstração do Bear Cub (uma versão
+  # otimizada do Hugo Bear Blog), enquanto o segundo tem uma aparência mais moderna baseada
+  # na versão de Herman Martinus do tema Blogster Minimal para Astro.
   themeStyle = "original"
 
-  # (EXPERIMENTAL) This theme is capable of dynamically generating social cards
-  # for posts that don't have `images` defined in their front matter; By setting
-  # `generateSocialCard` to false, you can prevent this behavior. For more
-  # information see layouts/partials/social_card.html
+  # (EXPERIMENTAL) Este tema é capaz de gerar dinamicamente cartões sociais
+  # para posts que não têm `images` definido no front matter; Definindo
+  # `generateSocialCard` como false, você pode desativar esse comportamento. Para mais
+  # informações, veja layouts/partials/social_card.html
   generateSocialCard = true
 
-  # Social media. Delete any item you aren't using to make sure it won't show up
-  # in your website's metadata.
+  # Redes sociais. Remova qualquer item que não esteja usando para garantir que não apareça
+  # nos metadados do seu site.
   [params.social]
-    twitter = "example" # Twitter handle (without '@')
-    facebook_admin = "0000000000" # Facebook Page Admin ID
+    twitter = "example" # Usuário do Twitter (sem '@')
+    facebook_admin = "0000000000" # ID do Administrador da Página do Facebook
 
-  # Author metadata. This is mostly used for the RSS feed of your site, but the
-  # email is also added to the footer of each post. You can hide the "reply to"
-  # link by using a `hideReply` param in front matter.
+  # Metadados do autor. Usado principalmente para o feed RSS do site, mas o
+  # e-mail também é adicionado ao rodapé de cada post. Você pode ocultar o link
+  # "responder para" usando o parâmetro `hideReply` no front matter.
   [params.author]
-    name = "John Doe" # Your name as shown in the RSS feed metadata
-    email = "me@example.com" # Added to the footer so readers can reply to posts
+    name = "John Doe" # Seu nome exibido nos metadados do feed RSS
+    email = "me@example.com" # Adicionado ao rodapé para que leitores possam responder aos posts
 ```
 
-## Contributing
+## Contribuindo
 
-If you come across any problems while using **Bear Cub**, you can file an
-[issue](https://github.com/clente/hugo-bearcub/issues) or create a [pull
+Se você encontrar algum problema ao usar o **Bear Cub**, pode abrir uma
+[issue](https://github.com/clente/hugo-bearcub/issues) ou criar um [pull
 request](https://github.com/clente/hugo-bearcub/pulls).
