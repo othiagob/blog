@@ -18,7 +18,7 @@ enableRobotsTXT = true
 
 [languages]
   [languages.pt]
-    title = "othiagob"
+    title = "OTHIAGOB"
     languageName = "pt-BR 🇧🇷"
     LanguageCode = "pt-BR"
     contentDir = "content.pt"
@@ -26,15 +26,15 @@ enableRobotsTXT = true
       madeWith = "Feito com [Bear Cub](https://github.com/clente/hugo-bearcub)"
 
 [params]
-  description = "Blog do othiagob"
+  description = "Blog do OTHIAGOB"
   favicon = "images/favicon.png"
   images = ["images/share.webp"]
-  title = "othiagob"
+  title = "OTHIAGOB"
   dateFormat = "2006-01-02"
   hideUntranslated = false
   themeStyle = "original"
   generateSocialCard = true
 
   [params.author]
-    name = "othiagob"
+    name = "OTHIAGOB"
     email = ""

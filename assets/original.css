@@ -1,4 +1,4 @@
-/* === Variáveis de tema === */
+/* === Variáveis de tema (dark) === */
 :root {
   --bg: #1d1f27;
   --text: #c9d1d9;
@@ -14,25 +14,6 @@
   --blockquote-text: #ccc;
   --figcaption: #ccc;
   --skip-link-bg: #1d1f27;
-  --toggle-icon: "☀️";
-}
-
-[data-theme="light"] {
-  --bg: #ffffff;
-  --text: #24292f;
-  --heading: #111111;
-  --link: #0969da;
-  --link-visited: #6f42c1;
-  --input-bg: #f6f8fa;
-  --input-text: #24292f;
-  --border: #d0d7de;
-  --code-text: #24292f;
-  --code-bg: #f6f8fa;
-  --blockquote-border: #aaaaaa;
-  --blockquote-text: #57606a;
-  --figcaption: #57606a;
-  --skip-link-bg: #ffffff;
-  --toggle-icon: "🌙";
 }
 
 body {
@@ -42,6 +23,8 @@ body {
   max-width: 720px;
   text-align: left;
   background-color: var(--bg);
+  background-image: radial-gradient(rgba(201, 209, 217, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1.5;
@@ -217,19 +200,3 @@ figcaption > p {
 }
 
 /* === Botão de alternância de tema === */
-.theme-toggle {
-  background: none;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 2px 7px;
-  color: var(--text);
-  vertical-align: middle;
-  line-height: 1.4;
-  transition: border-color 0.2s;
-}
-
-.theme-toggle:hover {
-  border-color: var(--link);
-}

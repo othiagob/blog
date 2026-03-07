@@ -1,24 +1,3 @@
   <!-- A partial to be overwritten by the user.
   Simply place a custom_body.html into
   your local /layouts/partials-directory -->
-
-<script>
-  (function() {
-    var btn = document.getElementById('theme-toggle');
-    var root = document.documentElement;
-
-    function updateBtn(theme) {
-      btn.textContent = theme === 'light' ? '🌙' : '☀️';
-      btn.setAttribute('aria-label', theme === 'light' ? 'Ativar tema escuro' : 'Ativar tema claro');
-    }
-
-    updateBtn(root.getAttribute('data-theme') || 'dark');
-
-    btn.addEventListener('click', function() {
-      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      updateBtn(next);
-    });
-  })();
-</script>

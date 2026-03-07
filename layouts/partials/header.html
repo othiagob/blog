@@ -1,7 +1,4 @@
 <a class="skip-link" href="#main-content">{{ i18n "skip-link" }}</a>
 
 <a href="{{ relURL .Site.Home.RelPermalink }}" class="title"><h1>{{ .Site.Title }}</h1></a>
-<nav>
-  {{- partial "nav.html" . -}}
-  <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema claro/escuro" title="Alternar tema claro/escuro">☀️</button>
-</nav>
+<nav>{{- partial "nav.html" . -}}</nav>
