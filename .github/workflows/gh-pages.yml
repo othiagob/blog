@@ -21,6 +21,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Link theme
+        run: ln -s ${{ github.workspace }} ${{ github.workspace }}/../hugo-bearcub
+
       - name: Build
         run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://clente.github.io/hugo-bearcub/
 
