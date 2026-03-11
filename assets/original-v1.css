@@ -1,13 +1,13 @@
 /* Neo brutalism theme */
 :root {
-  --bg: #f2efe8;
+  --bg: #f5f0e6;
   --surface: #fff;
   --ink: #161616;
   --muted: #4d4d4d;
   --line: #161616;
-  --accent: #eac0b5;
-  --accent-2: #bedfd8;
-  --accent-3: #efe1b8;
+  --accent: #f0ae9f;
+  --accent-2: #a9d8cf;
+  --accent-3: #f3df95;
   --focus: #315fce;
   --radius: 0;
   --shadow: 6px 6px 0 rgba(22, 22, 22, 0.95);
@@ -179,15 +179,14 @@ img {
 code {
   padding: 2px 6px;
   color: var(--ink);
-  background-color: #ecebe9;
+  background-color: #f3f3f3;
   border: 2px solid var(--line);
 }
 
 pre {
   border: 3px solid var(--line);
   box-shadow: 4px 4px 0 var(--line);
-  background: #232634;
-  color: #eef0f4;
+  background: #f6f6f6;
 }
 
 pre code {
@@ -198,25 +197,6 @@ pre code {
   overflow-x: auto;
   text-wrap: nowrap;
   border: 0;
-  background: transparent;
-  color: inherit;
-}
-
-.chroma,
-.bg {
-  background-color: #232634;
-  color: #eef0f4;
-}
-
-.chroma table,
-.chroma td,
-.chroma th,
-.chroma .lntable,
-.chroma .lntd {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  box-shadow: none;
   background: transparent;
 }
 
@@ -276,24 +256,14 @@ a.blog-tags {
   border: 2px solid var(--line);
   padding: 4px 10px;
   text-decoration: none;
-  background: #f2f2f0;
+  background: #f8f8f8;
   display: inline-block;
   box-shadow: 2px 2px 0 rgba(22, 22, 22, 0.9);
   font-size: 0.92rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
 }
 
 a.blog-tags:hover {
-  background: #e9ddbb;
-  transform: translate(-1px, -1px);
-}
-
-.tag-list {
-  margin-top: var(--space-3);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  background: #efe7c8;
 }
 
 h3.blog-filter {

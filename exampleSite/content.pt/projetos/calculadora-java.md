@@ -5,7 +5,7 @@ tags: ["java", "console", "iniciante"]
 ---
 
 Primeiro projeto Java documentado no blog: uma calculadora de linha de
-comando com suporte a múltiplas operações e tratamento de erros.
+comando com suporte a múltiplas operações e tratamento consistente de erros.
 
 ---
 
@@ -73,7 +73,8 @@ java Calculadora
 | `Scanner`             | Leitura de dados do console        |
 | `switch` com arrow    | Seleção da operação (Java 14+)     |
 | `yield`               | Retorno de valor dentro do switch  |
-| Exceções              | Divisão por zero e op. inválida    |
+| Exceções              | Divisão por zero e operação inválida |
 | `printf` / formatação | Exibição com 2 casas decimais      |
 
-Código disponível em breve no GitHub.
+Esse projeto é uma ótima base para evoluir para uma calculadora com histórico,
+testes automatizados e interface gráfica.
