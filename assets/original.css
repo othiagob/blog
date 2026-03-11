@@ -40,6 +40,13 @@ body {
 
 header,
 main,
+footer,
+content {
+  min-width: 0;
+}
+
+header,
+main,
 footer {
   background: var(--surface);
   border: 3px solid var(--line);
@@ -188,6 +195,8 @@ pre {
   box-shadow: 4px 4px 0 var(--line);
   background: #232634;
   color: #eef0f4;
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 pre code {
@@ -353,9 +362,64 @@ figcaption > p {
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    padding: var(--space-3) 12px;
+  }
+
+  main {
+    padding: var(--space-3) var(--space-2);
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .title h1 {
+    font-size: clamp(1.4rem, 1.1rem + 2.5vw, 1.9rem);
+    line-height: 1.2;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 auto;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  pre code {
+    padding: 14px;
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 540px) {
   body {
-    padding: var(--space-3) 10px;
+    padding: var(--space-2) 8px;
+  }
+
+  main {
+    padding: var(--space-2);
+  }
+
+  h1 {
+    font-size: clamp(1.7rem, 1.3rem + 2.8vw, 2.1rem);
+  }
+
+  h2 {
+    font-size: clamp(1.35rem, 1rem + 2vw, 1.7rem);
   }
 
   header,
@@ -372,5 +436,14 @@ figcaption > p {
   img,
   blockquote {
     box-shadow: 2px 2px 0 var(--line);
+  }
+
+  a.blog-tags {
+    font-size: 0.86rem;
+    padding: 4px 8px;
+  }
+
+  .tag-list {
+    gap: 6px;
   }
 }
