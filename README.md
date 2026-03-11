@@ -201,7 +201,7 @@ enableRobotsTXT = true
 
   # As datas são exibidas no formato abaixo. Para mais informações sobre
   # formatação, veja https://gohugo.io/functions/format/
-  dateFormat = "2006-01-02"
+  dateFormat = "02/01/2006"
 
   # Se o seu blog for multilíngue mas você não tiver traduzido uma página, este tema
   # criará um link desativado. Definindo `hideUntranslated` como true, você pode
