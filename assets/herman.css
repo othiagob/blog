@@ -149,6 +149,7 @@ p.byline {
   color: var(--color-light);
   font-style: normal;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .post-date-label {
@@ -156,18 +157,20 @@ p.byline {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   opacity: 0.85;
+  white-space: nowrap;
 }
 
 ul.blog-posts li .post-date {
-  display: inline-grid;
-  grid-template-rows: auto auto;
-  gap: 0.15rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   border-radius: 0.4rem;
   padding: 0.35rem 0.7rem;
+  font-size: 0.9em;
 }
 
 ul.blog-posts li .post-date-label {
-  font-size: 0.62em;
+  font-size: 0.58em;
   letter-spacing: 0.04em;
 }
 
