@@ -1,16 +1,16 @@
 /* Neo brutalism theme */
 :root {
-  --bg: #fff8de;
+  --bg: #f5f0e6;
   --surface: #fff;
-  --ink: #111;
-  --muted: #3f3f3f;
-  --line: #111;
-  --accent: #ff5f45;
-  --accent-2: #00c1a7;
-  --accent-3: #ffe24b;
-  --focus: #2463eb;
+  --ink: #161616;
+  --muted: #4d4d4d;
+  --line: #161616;
+  --accent: #f0ae9f;
+  --accent-2: #a9d8cf;
+  --accent-3: #f3df95;
+  --focus: #315fce;
   --radius: 0;
-  --shadow: 6px 6px 0 #111;
+  --shadow: 6px 6px 0 rgba(22, 22, 22, 0.95);
   --space-1: 0.6rem;
   --space-2: 1rem;
   --space-3: 1.6rem;
@@ -23,9 +23,9 @@
 
 body {
   font-family: "Space Grotesk", "IBM Plex Sans", "Fira Sans", sans-serif;
-  margin: 0;
+  margin: 0 auto;
+  width: min(920px, 100%);
   padding: var(--space-4) var(--space-2) var(--space-4);
-  max-width: 920px;
   text-align: left;
   color: var(--ink);
   line-height: 1.6;
@@ -250,17 +250,20 @@ ul.blog-posts li a:visited {
 }
 
 a.blog-tags {
-  line-height: 2;
-  margin-right: 10px;
+  line-height: 1.35;
+  margin-right: 0;
+  margin-bottom: 8px;
   border: 2px solid var(--line);
-  padding: 2px 8px;
+  padding: 4px 10px;
   text-decoration: none;
-  background: #fff;
+  background: #f8f8f8;
   display: inline-block;
+  box-shadow: 2px 2px 0 rgba(22, 22, 22, 0.9);
+  font-size: 0.92rem;
 }
 
 a.blog-tags:hover {
-  background: var(--accent-3);
+  background: #efe7c8;
 }
 
 h3.blog-filter {
