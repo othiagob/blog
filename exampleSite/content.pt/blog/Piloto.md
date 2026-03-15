@@ -1,7 +1,10 @@
 ---
 title: Piloto
-tags: ["Inicio"]
+tags:
+  - Inicio
+date: 2026-03-14
 ---
 
 
-_Apenas uma publicação de teste para ver se vai dar certo usando o obsidian._
+### Olá, seja bem vindo,
+Me chamo Thiago.
