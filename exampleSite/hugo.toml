@@ -24,6 +24,19 @@ enableRobotsTXT = true
     contentDir = "content.pt"
     [languages.pt.params]
       madeWith = "Feito com [Bear Cub](https://github.com/clente/hugo-bearcub)"
+    [languages.pt.menu]
+      [[languages.pt.menu.main]]
+        name = "Início"
+        pageRef = "/"
+        weight = 1
+      [[languages.pt.menu.main]]
+        name = "Blog"
+        pageRef = "/blog"
+        weight = 2
+      [[languages.pt.menu.main]]
+        name = "Projetos"
+        pageRef = "/projetos"
+        weight = 3
 
 [params]
   description = "Blog do OTHIAGOB"
