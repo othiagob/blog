@@ -46,7 +46,13 @@ enableRobotsTXT = true
   dateFormat = "02/01/2006"
   hideUntranslated = false
   themeStyle = "original"
+  fontFamily = "softUI"
+  fontFamilyAlt = "humanistUI"
   generateSocialCard = true
+
+  [params.fontFamilies]
+    softUI = '"Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Noto Sans", sans-serif'
+    humanistUI = '"Candara", "Optima", "Segoe UI", "Trebuchet MS", sans-serif'
 
   [params.author]
     name = "OTHIAGOB"

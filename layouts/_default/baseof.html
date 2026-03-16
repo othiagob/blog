@@ -14,6 +14,9 @@
   {{ $style := print (default "original" .Site.Params.themeStyle) ".css" | resources.Get | minify }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
 
+  {{ $fontStyle := resources.Get "font-family.css" | resources.ExecuteAsTemplate "font-family.css" . | minify }}
+  <link href="{{ $fontStyle.RelPermalink }}" rel="stylesheet">
+
   {{ if (.Page.Store.Get "hasCodeBlock") }}
     {{ $syntax := resources.Get "syntax.css" | minify }}
     <link href="{{ $syntax.RelPermalink }}" rel="stylesheet">

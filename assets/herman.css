@@ -3,6 +3,8 @@
   --color-dark: #181a20;
   --color-light: #fafafa;
   --color-primary: #1a8fe3;
+  --font-sans: "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Noto Sans",
+    sans-serif;
   --size: 1rem;
   --spacing: calc(var(--size) * 2.4);
 }
@@ -11,9 +13,7 @@ body {
   background: var(--color-dark);
   color: var(--color-light);
   padding: 4rem;
-  font-family: Avenir, 'Avenir Next LT Pro', Montserrat, Corbel, 'URW Gothic',
-    source-sans-pro, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-sans);
   font-size: calc(var(--size) * 1.8);
   line-height: 1.5;
   min-height: 80vh;

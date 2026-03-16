@@ -214,6 +214,18 @@ enableRobotsTXT = true
   # na versão de Herman Martinus do tema Blogster Minimal para Astro.
   themeStyle = "original"
 
+  # A tipografia principal agora pode ser trocada por preset. O tema expõe duas
+  # variações suaves por padrão: "softUI" e "humanistUI".
+  fontFamily = "softUI"
+
+  # Opcional: uma segunda pilha pronta para comparação rápida ou uso pontual em
+  # variações do tema.
+  fontFamilyAlt = "humanistUI"
+
+  [params.fontFamilies]
+    softUI = '"Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Noto Sans", sans-serif'
+    humanistUI = '"Candara", "Optima", "Segoe UI", "Trebuchet MS", sans-serif'
+
   # (EXPERIMENTAL) Este tema é capaz de gerar dinamicamente cartões sociais
   # para posts que não têm `images` definido no front matter; Definindo
   # `generateSocialCard` como false, você pode desativar esse comportamento. Para mais

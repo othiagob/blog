@@ -1,0 +1,15 @@
+{{- $defaultFamilies := dict
+  "softUI" "\"Segoe UI\", \"Segoe UI Symbol\", \"Segoe UI Emoji\", \"Noto Sans\", sans-serif"
+  "humanistUI" "\"Candara\", \"Optima\", \"Segoe UI\", \"Trebuchet MS\", sans-serif"
+-}}
+{{- $customFamilies := default (dict) .Site.Params.fontFamilies -}}
+{{- $families := merge $defaultFamilies $customFamilies -}}
+{{- $selectedKey := default "softUI" .Site.Params.fontFamily -}}
+{{- $altKey := default "humanistUI" .Site.Params.fontFamilyAlt -}}
+{{- $selectedFamily := default (index $defaultFamilies "softUI") (index $families $selectedKey) -}}
+{{- $altFamily := default (index $defaultFamilies "humanistUI") (index $families $altKey) -}}
+
+:root {
+  --font-sans: {{ $selectedFamily | safeCSS }};
+  --font-sans-alt: {{ $altFamily | safeCSS }};
+}

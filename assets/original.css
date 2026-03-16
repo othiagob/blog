@@ -9,6 +9,8 @@
   --accent-2: #bedfd8;
   --accent-3: #efe1b8;
   --focus: #315fce;
+  --font-sans: "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Noto Sans",
+    sans-serif;
   --radius: 0;
   --shadow: 6px 6px 0 rgba(22, 22, 22, 0.95);
   --space-1: 0.6rem;
@@ -22,7 +24,7 @@
 }
 
 body {
-  font-family: "Space Grotesk", "IBM Plex Sans", "Fira Sans", sans-serif;
+  font-family: var(--font-sans);
   margin: 0 auto;
   width: min(920px, 100%);
   padding: var(--space-4) var(--space-2) var(--space-4);
