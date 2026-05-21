@@ -1,5 +1,9 @@
 {{ range .Site.Menus.main.ByWeight }}
-  <a href="{{ .URL }}">{{ .Name }}</a>
+  {{ $cls := "" }}
+  {{ if eq .Name "Projetos" }}
+    {{ $cls = "primary" }}
+  {{ end }}
+  <a class="{{ $cls }}" href="{{ .URL }}">{{ .Name }}</a>
 {{ end }}
 
 <!-- Convert this page's translations into a dict -->

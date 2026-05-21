@@ -2,6 +2,9 @@
 title: "Calculadora em Java — Projeto de Console"
 date: 2024-03-20
 tags: ["java", "console", "iniciante"]
+summary: "Calculadora de console em Java — projeto didático com tratamento de erros e organização em classes."
+images: ["/images/projects/calculadora-thumb.png"]
+repo: "https://github.com/othiagob/calculadora-java"
 ---
 
 Primeiro projeto Java documentado no blog: uma calculadora de linha de

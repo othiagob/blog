@@ -1,8 +1,30 @@
+{{ $title := with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}
+{{ $description := with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary | plainify }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}
+{{ $canonical := .Permalink }}
+{{ $author := with .Params.author }}{{ . }}{{ else }}{{ .Site.Params.author.name }}{{ end }}
+{{ $image := "" }}
+{{ with .Params.images }}
+  {{ $image = (index . 0 | absURL) }}
+{{ else with .Site.Params.images }}
+  {{ $image = (index . 0 | absURL) }}
+{{ end }}
+
 <!-- Primary Meta Tags -->
-<meta name="title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}" />
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
-<meta name="author" content="{{ with .Params.author }}{{ . }}{{ end }}" />
+<meta name="title" content="{{ $title }}" />
+<meta name="description" content="{{ $description }}" />
+<meta name="author" content="{{ $author }}" />
 <meta name="keywords" content="{{ if .IsPage}}{{ range $index, $tag := .Params.tags }}{{ $tag }},{{ end }}{{ else }}{{ range $plural, $terms := .Site.Taxonomies }}{{ range $term, $val := $terms }}{{ printf "%s," $term }}{{ end }}{{ end }}{{ end }}" />
+<link rel="canonical" href="{{ $canonical }}" />
+
+<!-- Open Graph defaults -->
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:url" content="{{ $canonical }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:image" content="{{ $image }}" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+<meta name="twitter:image" content="{{ $image }}" />
 
 <!-- Only generate social card if: -->
 <!--   - generateSocialCard = true -->
@@ -20,3 +42,26 @@
   <!-- Microdata -->
   {{ template "_internal/schema.html" . }}
 {{ end }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL }}#website",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "{{ .Site.Title }}",
+      "description": "{{ .Site.Params.description }}",
+      "inLanguage": "{{ .Site.LanguageCode }}"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ .Site.BaseURL }}#person",
+      "name": "{{ .Site.Params.author.name }}",
+      "url": "{{ .Site.BaseURL }}",
+      "sameAs": {{ with .Site.Params.social.github }}["{{ . }}"]{{ else }}[]{{ end }}
+    }
+  ]
+}
+</script>

@@ -1,3 +1,7 @@
 <small>
-  <a href="https://github.com/othiagob" target="_blank" rel="noopener">OTHIAGOB</a> &copy; 2026
+  {{ with .Site.Params.author.name }}<span>{{ . }}</span>{{ end }}
+  &nbsp;•&nbsp;
+  {{ if .Site.Params.social.github }}<a href="{{ .Site.Params.social.github }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+  {{ if .Site.Params.social.twitter }} &nbsp;•&nbsp; <a href="{{ .Site.Params.social.twitter }}" target="_blank" rel="noopener">Twitter</a>{{ end }}
+  &nbsp;•&nbsp; &copy; {{ now.Format "2006" }}
 </small>

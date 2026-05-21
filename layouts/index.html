@@ -3,14 +3,12 @@
 {{ $projects := first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "projetos") }}
 
 <section class="home-hero" aria-labelledby="home-title">
-  <p class="eyebrow">blog pessoal</p>
-  <h1 id="home-title">{{ .Site.Params.author.name }}</h1>
-  <p class="hero-copy">
-    Java, Ciência da Computação e projetos práticos registrados com foco em clareza, código e evolução constante.
-  </p>
-  <div class="hero-actions">
-    <a class="button-link primary" href="{{ "blog/" | relLangURL }}">Publicações</a>
-    <a class="button-link" href="{{ "projetos/" | relLangURL }}">Projetos</a>
+  <h1 id="home-title" class="hero-title">{{ .Site.Params.author.name }}</h1>
+  <p class="hero-sub">Java • Ciência da Computação • Projetos práticos</p>
+  <p class="hero-copy">Java, Ciência da Computação e projetos práticos registrados com foco em clareza, código e evolução constante.</p>
+  <div class="hero-ctas">
+    <a class="btn primary" href="{{ "projetos/" | relLangURL }}">Ver projetos</a>
+    <a class="btn" href="{{ "blog/" | relLangURL }}">Ver publicações</a>
   </div>
 </section>
 
@@ -24,16 +22,16 @@
       <p class="eyebrow">recentes</p>
       <h2>Publicações</h2>
     </div>
-    <ul class="feature-list">
+    <div class="feature-list">
       {{ range $posts }}
-      <li>
-        <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02/01/2006" .Site.Params.dateFormat) }}</time>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
+      <a class="card" href="{{ .RelPermalink }}">
+        <div class="card-title">{{ .Title }}</div>
+        <div class="card-meta">{{ .Date.Format (default "02/01/2006" .Site.Params.dateFormat) }}</div>
+      </a>
       {{ else }}
-      <li>Nenhuma publicação ainda.</li>
+      <div class="muted">Nenhuma publicação ainda.</div>
       {{ end }}
-    </ul>
+    </div>
   </div>
 
   <div class="feature-panel accent-panel">
@@ -41,16 +39,16 @@
       <p class="eyebrow">laboratório</p>
       <h2>Projetos</h2>
     </div>
-    <ul class="feature-list">
+    <div class="feature-list">
       {{ range $projects }}
-      <li>
-        <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02/01/2006" .Site.Params.dateFormat) }}</time>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
+      <a class="card" href="{{ .RelPermalink }}">
+        <div class="card-title">{{ .Title }}</div>
+        <div class="card-meta">{{ .Date.Format (default "02/01/2006" .Site.Params.dateFormat) }}</div>
+      </a>
       {{ else }}
-      <li>Nenhum projeto publicado ainda.</li>
+      <div class="muted">Nenhum projeto publicado ainda.</div>
       {{ end }}
-    </ul>
+    </div>
   </div>
 </section>
 {{ end }}

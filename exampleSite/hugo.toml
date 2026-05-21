@@ -1,5 +1,5 @@
 # Configuração básica
-baseURL = "https://example.com"
+baseURL = "https://othiagob.github.io/blog/"
 theme = "hugo-bearcub"
 copyright = "othiagob (CC BY 4.0)"
 defaultContentLanguage = "pt"
@@ -37,9 +37,17 @@ enableRobotsTXT = true
         name = "Projetos"
         pageRef = "/projetos"
         weight = 3
+      [[languages.pt.menu.main]]
+        name = "Sobre"
+        pageRef = "/sobre"
+        weight = 4
+      [[languages.pt.menu.main]]
+        name = "Contato"
+        pageRef = "/contato"
+        weight = 5
 
 [params]
-  description = ""
+  description = "Blog e portfólio de OTHIAGOB — Java, Ciência da Computação e projetos." 
   favicon = "images/favicon.png"
   images = ["images/favicon.png"]
   title = "OTHIAGOB"
@@ -48,7 +56,21 @@ enableRobotsTXT = true
   themeStyle = "original"
   fontFamily = "softUI"
   fontFamilyAlt = "humanistUI"
-  generateSocialCard = false
+  generateSocialCard = true
+  # SEO defaults
+  keywords = ["Java","Ciência da Computação","Projetos","Portfólio","Blog"]
+  descriptionShort = "Portfólio e blog técnico de OTHIAGOB — Java, CS e projetos." 
+  canonical = "https://othiagob.github.io/blog/"
+
+  [params.social]
+    github = "https://github.com/othiagob"
+    twitter = ""
+    linkedin = ""
+
+  [params.seo]
+    enable = true
+    twitterCard = "summary_large_image"
+    siteName = "OTHIAGOB"
 
   [params.fontFamilies]
     softUI = '"Segoe UI Variable Text", "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Noto Sans", sans-serif'
@@ -57,3 +79,11 @@ enableRobotsTXT = true
   [params.author]
     name = "OTHIAGOB"
     email = ""
+
+[outputs]
+  home = ["HTML","RSS","JSON"]
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.7
+  filename = "sitemap.xml"

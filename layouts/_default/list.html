@@ -3,27 +3,23 @@
   {{ if .Data.Singular }}
     <h3 class="blog-filter">{{ i18n "filtering-for" }} "{{ .Title }}"</h3>
   {{ end }}
-  <ul class="blog-posts">
+
+  <div class="content-grid">
     {{ range .Pages.ByDate.Reverse }}
-    <li>
-      <span>
-        <time class="post-date" datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
-          <span class="post-date-label">{{ i18n "published-on" }}</span>
-          {{ .Date.Format (default "02/01/2006" .Site.Params.dateFormat) }}
-        </time>
-      </span>
-      {{ if .Params.link }}
-        <a href="{{ .Params.link }}" target="_blank">{{ .Title }} ↪</a>
-      {{ else }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{ end }}
-    </li>
+    <a class="card" href="{{ .RelPermalink }}">
+      <div>
+        <div class="card-title">{{ .Title }}</div>
+        <div class="card-meta">
+          <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>{{ .Date.Format (default "02/01/2006" .Site.Params.dateFormat) }}</time>
+        </div>
+        <p class="muted">{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ .Params.description }}{{ end }}</p>
+      </div>
+    </a>
     {{ else }}
-    <li>
-      {{ i18n "no-posts" }}
-    </li>
+    <div class="muted">{{ i18n "no-posts" }}</div>
     {{ end }}
-  </ul>
+  </div>
+
   {{ if not .Data.Singular }}
     <div class="tag-list">
       {{ range .Site.Taxonomies.tags }}

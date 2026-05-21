@@ -1,22 +1,28 @@
 {{ define "main" }}
-{{ if not .Params.menu }}
-<h1>{{ .Title }}</h1>
-<p class="byline">
-  <time class="post-date" datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
-    <span class="post-date-label">{{ i18n "published-on" }}</span>
-    {{ .Date.Format (default "02/01/2006" .Site.Params.dateFormat) }}
-  </time>
-  {{ with .Params.author }}· {{.}}{{ end }}
-</p>
-{{ end }}
-<div class="prose">
-  {{ .Content }}
-</div>
-<p class="tag-list">
-  {{ range (.GetTerms "tags") }}
-    <a class="blog-tags" href="{{ .RelPermalink }}">#{{ lower .LinkTitle }}</a>
+  {{ if not .Params.menu }}
+  <article class="card">
+    <header>
+      <h1>{{ .Title }}</h1>
+      <p class="byline">
+        <time class="post-date" datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+          <span class="post-date-label">{{ i18n "published-on" }}</span>
+          {{ .Date.Format (default "02/01/2006" .Site.Params.dateFormat) }}
+        </time>
+        {{ with .Params.author }}· {{.}}{{ end }}
+      </p>
+    </header>
+  </article>
   {{ end }}
-</p>
+
+  <div class="prose">
+    {{ .Content }}
+  </div>
+
+  <p class="tag-list">
+    {{ range (.GetTerms "tags") }}
+      <a class="blog-tags" href="{{ .RelPermalink }}">#{{ lower .LinkTitle }}</a>
+    {{ end }}
+  </p>
 {{ if not .Params.hideReply }}
 {{ with .Site.Params.author.email }}
   <p>
