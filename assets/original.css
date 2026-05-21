@@ -1,24 +1,39 @@
 :root {
-  --bg: #f5f0e6;
+  /* Paleta fornecida pelo usuário */
+  --color1: #1a081f; /* tom escuro principal */
+  --color2: #4d1d4d; /* magenta profundo */
+  --color3: #05676e; /* teal */
+  --color4: #489c79; /* verde/menta */
+  --color5: #ebc288; /* areia / destaque claro */
+
+  /* Mapeamento semântico que o tema usa */
+  --bg: #fff8f2; /* fundo claro neutro, harmoniza com color5 */
   --surface: #ffffff;
-  --surface-alt: #faf8f5;
-  --ink: #161616;
-  --muted: #4d4d4d;
-  --line: #161616;
-  --accent: #d97760;
-  --accent-2: #6ba896;
-  --accent-3: #d4c563;
-  --focus: #315fce;
+  --surface-alt: #fff6ec;
+  --ink: var(--color1);
+  --muted: var(--color2);
+  --line: var(--color1);
+  --accent: var(--color2);
+  --accent-2: var(--color3);
+  --accent-3: var(--color5);
+  --focus: var(--color4);
   --font-sans: "Segoe UI", "IBM Plex Sans", "Fira Sans", sans-serif;
   --radius: 0;
-  --shadow: 4px 4px 0 rgba(22, 22, 22, 0.9);
-  --shadow-soft: 2px 2px 0 rgba(22, 22, 22, 0.8);
+  --shadow: 4px 4px 0 rgba(26, 8, 31, 0.9);
+  --shadow-soft: 2px 2px 0 rgba(26, 8, 31, 0.8);
   --space-1: 0.6rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
   --space-4: 2.2rem;
   --space-5: 3.4rem;
 }
+
+/* Classes utilitárias de teste rápido para aplicar a paleta */
+.color1 { background-color: var(--color1); color: var(--surface); }
+.color2 { background-color: var(--color2); color: var(--surface); }
+.color3 { background-color: var(--color3); color: var(--surface); }
+.color4 { background-color: var(--color4); color: var(--surface); }
+.color5 { background-color: var(--color5); color: var(--color1); }
 
 * {
   box-sizing: border-box;
