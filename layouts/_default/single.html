@@ -9,9 +9,9 @@
   {{ with .Params.author }}· {{.}}{{ end }}
 </p>
 {{ end }}
-<content>
+<div class="prose">
   {{ .Content }}
-</content>
+</div>
 <p class="tag-list">
   {{ range (.GetTerms "tags") }}
     <a class="blog-tags" href="{{ .RelPermalink }}">#{{ lower .LinkTitle }}</a>

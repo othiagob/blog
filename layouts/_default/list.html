@@ -1,5 +1,5 @@
 {{ define "main" }}
-<content>
+<div class="prose">
   {{ if .Data.Singular }}
     <h3 class="blog-filter">{{ i18n "filtering-for" }} "{{ .Title }}"</h3>
   {{ end }}
@@ -31,5 +31,5 @@
       {{ end }}
     </div>
   {{ end }}
-</content>
+</div>
 {{ end }}
