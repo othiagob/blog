@@ -18,7 +18,7 @@ enableRobotsTXT = true
 
 [languages]
   [languages.pt]
-    title = "br.com.othiagob.blog"
+    title = "othiagob"
     languageName = "pt-BR 🇧🇷"
     LanguageCode = "pt-BR"
     contentDir = "content.pt"
@@ -39,10 +39,10 @@ enableRobotsTXT = true
         weight = 3
 
 [params]
-  description = "thiago"
+  description = ""
   favicon = "images/favicon.png"
   images = ["images/favicon.png"]
-  title = "br.com.othiagob.blog"
+  title = "othiagob"
   dateFormat = "02/01/2006"
   hideUntranslated = false
   themeStyle = "original"

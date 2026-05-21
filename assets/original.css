@@ -1,18 +1,18 @@
 :root {
-  --bg: #f9f6f0;
+  --bg: #f4f8fc;
   --surface: #ffffff;
-  --surface-alt: #f0ebe0;
+  --surface-alt: #eef4fb;
   --ink: #222222;
   --muted: #555555;
   --line: #222222;
-  --accent: #2a7c6d;
-  --accent-2: #c14d3d;
-  --accent-3: #d98c3e;
-  --focus: #2a7c6d;
+  --accent: #2f6fd6;
+  --accent-2: #c56a38;
+  --accent-3: #c4932f;
+  --focus: #2f6fd6;
   --font-sans: "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Noto Sans", sans-serif;
   --radius: 10px;
-  --shadow: 5px 5px 0 rgba(34, 34, 34, 0.9);
-  --shadow-soft: 3px 3px 0 rgba(34, 34, 34, 0.86);
+  --shadow: 4px 4px 0 rgba(34, 34, 34, 0.88);
+  --shadow-soft: 2px 2px 0 rgba(34, 34, 34, 0.82);
   --space-1: 0.6rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -37,8 +37,8 @@ body {
   background-image:
     linear-gradient(0deg, rgba(34, 34, 34, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(34, 34, 34, 0.04) 1px, transparent 1px),
-    radial-gradient(circle at top left, rgba(42, 124, 109, 0.08), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(193, 77, 61, 0.08), transparent 24%);
+    radial-gradient(circle at top left, rgba(47, 111, 214, 0.08), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(196, 147, 47, 0.08), transparent 24%);
   background-size: 30px 30px, 30px 30px, auto, auto;
   font-family: var(--font-sans);
   font-size: 1.1rem;
@@ -151,13 +151,13 @@ summary:focus-visible {
   padding: 0.7rem 1rem;
   border: 5px solid var(--line);
   border-radius: calc(var(--radius) - 2px);
-  background: linear-gradient(135deg, #ffffff 0%, #fbf2e7 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #eef4fb 100%);
   box-shadow: var(--shadow-soft);
   text-decoration: none;
 }
 
 .title:hover {
-  background: linear-gradient(135deg, #ffffff 0%, #e8f4f0 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #e5edf9 100%);
 }
 
 .title h1 {
@@ -359,7 +359,7 @@ li {
   border: 5px solid var(--line);
   border-radius: var(--radius);
   background:
-    linear-gradient(135deg, rgba(42, 124, 109, 0.12) 0 33%, rgba(217, 140, 62, 0.16) 33% 66%, rgba(193, 77, 61, 0.12) 66% 100%),
+    linear-gradient(135deg, rgba(47, 111, 214, 0.12) 0 32%, rgba(238, 244, 251, 0.92) 32% 68%, rgba(196, 147, 47, 0.14) 68% 100%),
     var(--surface);
   box-shadow: var(--shadow-soft);
 }
@@ -458,11 +458,11 @@ ul.blog-posts li,
 
 .feature-panel {
   padding: 1.2rem 1.3rem;
-  background: rgba(42, 124, 109, 0.12);
+  background: rgba(47, 111, 214, 0.1);
 }
 
 .feature-panel.accent-panel {
-  background: rgba(193, 77, 61, 0.12);
+  background: rgba(196, 147, 47, 0.12);
 }
 
 .section-heading {
@@ -745,6 +745,6 @@ summary {
   pre,
   blockquote,
   img {
-    box-shadow: 3px 3px 0 rgba(34, 34, 34, 0.88);
+    box-shadow: 2px 2px 0 rgba(34, 34, 34, 0.84);
   }
 }
