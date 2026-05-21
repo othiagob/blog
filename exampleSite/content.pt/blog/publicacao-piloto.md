@@ -1,5 +1,6 @@
 ---
 title: "Publicação piloto"
+date: 2026-03-10
 tags: ["Inicio", "Guia", "Publicacao"]
 ---
 

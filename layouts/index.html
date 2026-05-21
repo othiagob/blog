@@ -1,3 +1,56 @@
 {{ define "main" }}
-{{ .Content }}
+{{ $posts := first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
+{{ $projects := first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "projetos") }}
+
+<section class="home-hero" aria-labelledby="home-title">
+  <p class="eyebrow">blog pessoal</p>
+  <h1 id="home-title">{{ .Site.Title }}</h1>
+  <p class="hero-copy">
+    Java, Ciência da Computação e projetos práticos registrados com foco em clareza, código e evolução constante.
+  </p>
+  <div class="hero-actions">
+    <a class="button-link primary" href="{{ "blog/" | relLangURL }}">Publicações</a>
+    <a class="button-link" href="{{ "projetos/" | relLangURL }}">Projetos</a>
+  </div>
+</section>
+
+<section class="intro-panel">
+  {{ .Content }}
+</section>
+
+<section class="content-grid" aria-label="Conteúdos recentes">
+  <div class="feature-panel">
+    <div class="section-heading">
+      <p class="eyebrow">recentes</p>
+      <h2>Publicações</h2>
+    </div>
+    <ul class="feature-list">
+      {{ range $posts }}
+      <li>
+        <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02/01/2006" .Site.Params.dateFormat) }}</time>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+      {{ else }}
+      <li>Nenhuma publicação ainda.</li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div class="feature-panel accent-panel">
+    <div class="section-heading">
+      <p class="eyebrow">laboratório</p>
+      <h2>Projetos</h2>
+    </div>
+    <ul class="feature-list">
+      {{ range $projects }}
+      <li>
+        <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02/01/2006" .Site.Params.dateFormat) }}</time>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+      {{ else }}
+      <li>Nenhum projeto publicado ainda.</li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
 {{ end }}

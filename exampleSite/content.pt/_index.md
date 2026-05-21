@@ -1,7 +1,5 @@
 ---
 title: "Início"
-menu: "main"
-weight: 1
 ---
 
 ## Sobre o blog

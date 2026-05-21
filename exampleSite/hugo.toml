@@ -41,14 +41,14 @@ enableRobotsTXT = true
 [params]
   description = "Blog do OTHIAGOB"
   favicon = "images/favicon.png"
-  images = ["images/share.webp"]
+  images = ["images/favicon.png"]
   title = "OTHIAGOB"
   dateFormat = "02/01/2006"
   hideUntranslated = false
   themeStyle = "original"
   fontFamily = "softUI"
   fontFamilyAlt = "humanistUI"
-  generateSocialCard = true
+  generateSocialCard = false
 
   [params.fontFamilies]
     softUI = '"Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Noto Sans", sans-serif'
