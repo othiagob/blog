@@ -1,3 +1,9 @@
+---
+title: "CidadãoBot API · Farmácias de Plantãos"
+date: 2026-05-21
+tags: ["java", "collections", "estrutura de dados", "backend", "SDD", "Thiago Blog Teste"]
+---
+
 # SDD — CidadãoBot API · Farmácias de Plantão
 
 > **Versão:** 3.0 Definitiva  
