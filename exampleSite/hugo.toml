@@ -18,7 +18,7 @@ enableRobotsTXT = true
 
 [languages]
   [languages.pt]
-    title = "othiagob"
+    title = "OTHIAGOB"
     languageName = "pt-BR 🇧🇷"
     LanguageCode = "pt-BR"
     contentDir = "content.pt"
@@ -42,7 +42,7 @@ enableRobotsTXT = true
   description = ""
   favicon = "images/favicon.png"
   images = ["images/favicon.png"]
-  title = "othiagob"
+  title = "OTHIAGOB"
   dateFormat = "02/01/2006"
   hideUntranslated = false
   themeStyle = "original"
@@ -55,5 +55,5 @@ enableRobotsTXT = true
     humanistUI = '"Segoe UI Variable Text", "Segoe UI", "Candara", "Optima", "Trebuchet MS", sans-serif'
 
   [params.author]
-    name = "thiago"
+    name = "OTHIAGOB"
     email = ""

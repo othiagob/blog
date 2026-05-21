@@ -1,11 +1,11 @@
 :root {
-	--code-bg: #f0ebe0;
+	--code-bg: #edf6ff;
 	--code-line: #222222;
 	--code-text: #222222;
 	--code-muted: #555555;
 	--code-accent: #2f6fd6;
-	--code-accent-2: #c56a38;
-	--code-accent-3: #c4932f;
+	--code-accent-2: #4aa98b;
+	--code-accent-3: #d8b84d;
 }
 
 .bg,
@@ -39,7 +39,7 @@
 }
 
 .chroma .hl {
-	background-color: rgba(42, 124, 109, 0.18);
+	background-color: rgba(47, 111, 214, 0.16);
 }
 
 .chroma .lnt,
