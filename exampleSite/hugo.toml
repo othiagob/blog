@@ -18,7 +18,7 @@ enableRobotsTXT = true
 
 [languages]
   [languages.pt]
-    title = "OTHIAGOB"
+    title = "br.com.othiagob.blog"
     languageName = "pt-BR 🇧🇷"
     LanguageCode = "pt-BR"
     contentDir = "content.pt"
@@ -39,10 +39,10 @@ enableRobotsTXT = true
         weight = 3
 
 [params]
-  description = "Blog do OTHIAGOB"
+  description = "thiago"
   favicon = "images/favicon.png"
   images = ["images/favicon.png"]
-  title = "OTHIAGOB"
+  title = "br.com.othiagob.blog"
   dateFormat = "02/01/2006"
   hideUntranslated = false
   themeStyle = "original"
@@ -51,9 +51,9 @@ enableRobotsTXT = true
   generateSocialCard = false
 
   [params.fontFamilies]
-    softUI = '"Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Noto Sans", sans-serif'
-    humanistUI = '"Candara", "Optima", "Segoe UI", "Trebuchet MS", sans-serif'
+    softUI = '"Segoe UI Variable Text", "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Noto Sans", sans-serif'
+    humanistUI = '"Segoe UI Variable Text", "Segoe UI", "Candara", "Optima", "Trebuchet MS", sans-serif'
 
   [params.author]
-    name = "OTHIAGOB"
+    name = "thiago"
     email = ""
