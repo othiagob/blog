@@ -1,30 +1,49 @@
-{{ $title := with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}
-{{ $description := with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary | plainify }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}
-{{ $canonical := .Permalink }}
-{{ $author := with .Params.author }}{{ . }}{{ else }}{{ .Site.Params.author.name }}{{ end }}
-{{ $image := "" }}
+{{/* Safe variable assignment using Scratch to avoid template parse errors */}}
+{{ if .Title }}
+  {{ $.Scratch.Set "title" .Title }}
+{{ else }}
+  {{ $.Scratch.Set "title" .Site.Title }}
+{{ end }}
+
+{{ if .Description }}
+  {{ $.Scratch.Set "description" .Description }}
+{{ else if .IsPage }}
+  {{ $.Scratch.Set "description" (plainify .Summary) }}
+{{ else }}
+  {{ $.Scratch.Set "description" .Site.Params.description }}
+{{ end }}
+
+{{ $.Scratch.Set "canonical" .Permalink }}
+
+{{ if .Params.author }}
+  {{ $.Scratch.Set "author" .Params.author }}
+{{ else }}
+  {{ $.Scratch.Set "author" .Site.Params.author.name }}
+{{ end }}
+
+{{ $.Scratch.Set "image" "" }}
 {{ with .Params.images }}
-  {{ $image = (index . 0 | absURL) }}
-{{ else with .Site.Params.images }}
-  {{ $image = (index . 0 | absURL) }}
+  {{ $.Scratch.Set "image" (index . 0 | absURL) }}
+{{ else if .Site.Params.images }}
+  {{ $.Scratch.Set "image" (index .Site.Params.images 0 | absURL) }}
 {{ end }}
 
 <!-- Primary Meta Tags -->
-<meta name="title" content="{{ $title }}" />
-<meta name="description" content="{{ $description }}" />
-<meta name="author" content="{{ $author }}" />
+<meta name="title" content="{{ $.Scratch.Get "title" }}" />
+<meta name="description" content="{{ $.Scratch.Get "description" }}" />
+<meta name="author" content="{{ $.Scratch.Get "author" }}" />
 <meta name="keywords" content="{{ if .IsPage}}{{ range $index, $tag := .Params.tags }}{{ $tag }},{{ end }}{{ else }}{{ range $plural, $terms := .Site.Taxonomies }}{{ range $term, $val := $terms }}{{ printf "%s," $term }}{{ end }}{{ end }}{{ end }}" />
-<link rel="canonical" href="{{ $canonical }}" />
+<link rel="canonical" href="{{ $.Scratch.Get "canonical" }}" />
 
 <!-- Open Graph defaults -->
-<meta property="og:title" content="{{ $title }}" />
-<meta property="og:description" content="{{ $description }}" />
-<meta property="og:url" content="{{ $canonical }}" />
+<meta property="og:title" content="{{ $.Scratch.Get "title" }}" />
+<meta property="og:description" content="{{ $.Scratch.Get "description" }}" />
+<meta property="og:url" content="{{ $.Scratch.Get "canonical" }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="og:image" content="{{ $image }}" />
-<meta name="twitter:title" content="{{ $title }}" />
-<meta name="twitter:description" content="{{ $description }}" />
-<meta name="twitter:image" content="{{ $image }}" />
+<meta property="og:image" content="{{ $.Scratch.Get "image" }}" />
+<meta name="twitter:title" content="{{ $.Scratch.Get "title" }}" />
+<meta name="twitter:description" content="{{ $.Scratch.Get "description" }}" />
+<meta name="twitter:image" content="{{ $.Scratch.Get "image" }}" />
 
 <!-- Only generate social card if: -->
 <!--   - generateSocialCard = true -->
